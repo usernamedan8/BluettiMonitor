@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Bluetti Monitor
+Comment=Monitor battery status and power flows of Bluetti power stations
+Exec=bluetti-monitor
+Icon=io.github.usernamedan8.BluettiMonitor
+Terminal=false
+Type=Application
+Categories=Utility;HardwareSettings;
+Keywords=bluetti;battery;power;solar;bluetooth;

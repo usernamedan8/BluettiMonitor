@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>io.github.usernamedan8.BluettiMonitor</id>
+  <name>Bluetti Monitor</name>
+  <summary>Unofficial monitor for BLUETTI power stations over Bluetooth</summary>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>MIT</project_license>
+  <developer id="io.github.usernamedan8">
+    <name>usernamedan8</name>
+  </developer>
+  <description>
+    <p>
+      Reads a BLUETTI power station (Elite 200 V2, Elite 30 V2 and other V2-protocol
+      models) over encrypted Bluetooth LE and shows battery level, power flows, cell
+      voltages, temperatures, energy totals and raw registers, with a system-tray
+      battery readout. It only reads from the station and never changes its settings.
+    </p>
+    <p>This is an independent project and is not affiliated with or endorsed by BLUETTI.</p>
+  </description>
+  <url type="homepage">https://github.com/usernamedan8/BluettiMonitor</url>
+  <url type="bugtracker">https://github.com/usernamedan8/BluettiMonitor/issues</url>
+  <url type="vcs-browser">https://github.com/usernamedan8/BluettiMonitor</url>
+  <screenshots>
+    <screenshot type="default">
+      <caption>Battery level, power flows, history graphs and cell voltages</caption>
+      <image>https://raw.githubusercontent.com/usernamedan8/BluettiMonitor/v1.1.0/screenshots/overview.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Every reading, grouped and explained</caption>
+      <image>https://raw.githubusercontent.com/usernamedan8/BluettiMonitor/v1.1.0/screenshots/readings.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Raw register view</caption>
+      <image>https://raw.githubusercontent.com/usernamedan8/BluettiMonitor/v1.1.0/screenshots/registers.png</image>
+    </screenshot>
+  </screenshots>
+  <branding>
+    <color type="primary" scheme_preference="light">#a7f3c0</color>
+    <color type="primary" scheme_preference="dark">#14532d</color>
+  </branding>
+  <launchable type="desktop-id">io.github.usernamedan8.BluettiMonitor.desktop</launchable>
+  <content_rating type="oars-1.1"/>
+  <requires>
+    <control>pointing</control>
+  </requires>
+  <releases>
+    <release version="1.1.0" date="2026-10-11"/>
+  </releases>
+</component>
