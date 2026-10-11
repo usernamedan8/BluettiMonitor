@@ -9,6 +9,12 @@ Tested with the Elite 200 V2; other V2-protocol models (e.g. Elite 30 V2) should
 
 ![Overview](screenshots/overview.png)
 
+
+
+https://github.com/user-attachments/assets/b19fc483-b242-4d83-883b-a822ae6c7041
+
+
+
 ## Install
 
 From a release bundle:
