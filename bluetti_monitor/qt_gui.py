@@ -15,11 +15,12 @@ from PySide6.QtCore import QEvent, QPointF, QRectF, QSettings, QSize, Qt, QTimer
 from PySide6.QtGui import (QAction, QActionGroup, QColor, QDesktopServices, QFont, QFontDatabase, QIcon,
                            QPainter, QPainterPath, QPalette, QPen, QPixmap)
 from PySide6.QtWidgets import (QApplication, QCheckBox, QFileDialog, QFrame, QGridLayout, QHBoxLayout,
-                               QHeaderView, QLabel, QLineEdit, QMainWindow, QMenu, QPlainTextEdit,
+                               QHeaderView, QLabel, QLineEdit, QMainWindow, QMenu, QMessageBox, QPlainTextEdit,
                                QProgressBar, QPushButton, QScrollArea, QSizePolicy, QSystemTrayIcon,
                                QTabWidget, QToolBar, QToolButton, QTreeWidget, QTreeWidgetItem,
                                QVBoxLayout, QWidget)
 
+from . import __version__
 from . import registers as R
 
 # Accent colours shared with the macOS app.
@@ -1173,9 +1174,29 @@ class MainWindow(QMainWindow):
         menu.addSeparator()
         menu.addAction("Forget this station", self.forget_station)
         menu.addSeparator()
+        menu.addAction("About Bluetti Monitor", self.show_about)
         menu.addAction("Quit", self.quit)
         opts.setMenu(menu)
         tb.addWidget(opts)
+
+    def show_about(self):
+        box = QMessageBox(self)
+        box.setWindowTitle("About Bluetti Monitor")
+        box.setIconPixmap(app_icon().pixmap(64, 64))
+        box.setTextFormat(Qt.RichText)
+        box.setText(f"<b>Bluetti Monitor {__version__}</b><br>An unofficial, read-only monitor for BLUETTI power stations.")
+        box.setInformativeText(
+            "<p>A hobby project, provided as is with no warranty. Use at your own risk.</p>"
+            "<p><b>Unofficial.</b> BLUETTI is a trademark of its owner. This app is not affiliated with, "
+            "endorsed by or supported by BLUETTI.</p>"
+            "<p><b>Read-only.</b> It only reads values and never changes settings, switches outputs "
+            "or alters charging.</p>"
+            "<p><b>Encryption keys.</b> The Bluetooth encryption keys it uses are the same for every unit "
+            "and come from the open-source bluetti-bt-lib project, where they are already public. They only "
+            "work within Bluetooth range and give no access to any BLUETTI account, cloud service or Wi-Fi.</p>"
+            "<p><b>AI-assisted.</b> Much of this code was written with the help of AI tools.</p>"
+            "<p>MIT licence. Bundles bleak (MIT).</p>")
+        box.exec()
 
     def _build_tray(self):
         self.tray = None
