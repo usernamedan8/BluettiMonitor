@@ -44,6 +44,11 @@
     <control>pointing</control>
   </requires>
   <releases>
+    <release version="1.1.1" date="2026-10-12">
+      <description>
+        <p>Adds an About window with a disclaimer: unofficial, read-only, where the encryption keys come from, and an AI-assistance note.</p>
+      </description>
+    </release>
     <release version="1.1.0" date="2026-10-11"/>
   </releases>
 </component>

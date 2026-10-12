@@ -21,7 +21,7 @@ https://github.com/user-attachments/assets/b19fc483-b242-4d83-883b-a822ae6c7041
 If you've been given a Flatpak bundle:
 
 ```
-flatpak install --user bluetti-monitor-1.1.0.flatpak
+flatpak install --user bluetti-monitor-1.1.1.flatpak
 ```
 
 ## Run from source
